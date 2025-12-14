@@ -48,5 +48,4 @@ Thumbs.db
 
 dataset/
 test_images/
-*.txt
 *.docs
