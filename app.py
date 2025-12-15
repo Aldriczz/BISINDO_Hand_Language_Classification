@@ -294,6 +294,9 @@ def main():
                     visualize=True,
                     block_norm='L2-Hys'
                 )
+
+                hog_image = (hog_image - hog_image.min()) / (hog_image.max() - hog_image.min() + 1e-7)
+
                 col_hog1, col_hog2 = st.columns(2)
                 with col_hog1:
                     st.image(cv2.cvtColor(img_resized, cv2.COLOR_BGR2RGB), caption="Original", use_container_width=True)
