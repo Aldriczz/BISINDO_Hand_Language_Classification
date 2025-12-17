@@ -163,7 +163,7 @@ def display_probability_bars(prob_dict):
     for class_name, prob in sorted_probs:
         col1, col2, col3 = st.columns([1, 3, 1])
         with col1:
-            st.write(f"{CLASS_EMOJIS[class_name]} **{class_name.capitalize()}**")
+            st.write(f"**{class_name}**")
         with col2:
             st.progress(prob)
         with col3:
@@ -265,7 +265,7 @@ def main():
         with result_placeholder.container():
             st.markdown(f"""
             <div style="text-align: center; padding: 20px; background-color: {CLASS_COLORS[pred_class]}20; border-radius: 10px; border: 2px solid {CLASS_COLORS[pred_class]};">
-                <h1 style="color: {CLASS_COLORS[pred_class]};">{pred_class} {pred_class.upper()}</h1>
+                <h1 style="color: {CLASS_COLORS[pred_class]};">{pred_class}</h1>
                 <h2>{confidence:.1%} Confidence</h2>
             </div>
             """, unsafe_allow_html=True)
